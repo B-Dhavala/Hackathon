@@ -3,13 +3,14 @@ import streamlit as st
 from fpdf import FPDF
 import pandas as pd
 import re
+import os
 import matplotlib.pyplot as plt
 import plotly.express as px
 from io import BytesIO
 import tempfile
  
 # API key for Google Gemini
-keys_file = st.secrets['keys_file']
+keys_file = st.secrets["keys_file"]
 genai.configure(api_key=keys_file)
 
 def extract_code_from_file(uploaded_file):
