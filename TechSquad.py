@@ -9,7 +9,7 @@ from io import BytesIO
 import tempfile
  
 # API key for Google Gemini
-keys_file = st.secrets['key_file']
+keys_file = st.secrets['keys_file']
 genai.configure(api_key=keys_file)
 
 def extract_code_from_file(uploaded_file):
